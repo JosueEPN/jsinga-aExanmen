@@ -54,16 +54,52 @@ public partial class Registro : ContentPage
     }
 
     private void btn_Resume_Clicked(object sender, EventArgs e)
-    { 
+    {
         string NomEstudiante = txtNombre.Text;
         string apellido = txtApellido.Text;
         string edad = txtEdad.Text;
         string fecha = fechaPicker.Date.ToString("yyyy-MM-dd");
-        string pais = paisPicker.Items[paisPicker.SelectedIndex]; 
-        string ciudad = ciudadPicker.Items[ciudadPicker.SelectedIndex];
+        string pais = paisPicker.SelectedIndex != -1 ? paisPicker.Items[paisPicker.SelectedIndex] : string.Empty;
+        string ciudad = ciudadPicker.SelectedIndex != -1 ? ciudadPicker.Items[ciudadPicker.SelectedIndex] : string.Empty;
 
+        if (string.IsNullOrWhiteSpace(NomEstudiante))
+        {
+            DisplayAlert("Error", "Por favor, ingrese el nombre del estudiante.", "OK");
+            return;
+        }
 
+        if (string.IsNullOrWhiteSpace(apellido))
+        {
+            DisplayAlert("Error", "Por favor, ingrese el apellido del estudiante.", "OK");
+            return;
+        }
 
-        Navigation.PushAsync(new Resumen(user, NomEstudiante, apellido, edad , fecha, pais, ciudad , GloMontoInicial, GloCuotaMensual, GloPagoTotal));
+        if (string.IsNullOrWhiteSpace(edad))
+        {
+            DisplayAlert("Error", "Por favor, ingrese la edad del estudiante.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(fecha))
+        {
+            DisplayAlert("Error", "Por favor, seleccione una fecha.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(pais))
+        {
+            DisplayAlert("Error", "Por favor, seleccione un país.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(ciudad))
+        {
+            DisplayAlert("Error", "Por favor, seleccione una ciudad.", "OK");
+            return;
+        }
+
+        
+        Navigation.PushAsync(new Resumen(user, NomEstudiante, apellido, edad, fecha, pais, ciudad, GloMontoInicial, GloCuotaMensual, GloPagoTotal));
     }
+
 }

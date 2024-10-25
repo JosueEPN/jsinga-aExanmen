@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jsingañaExanmen.Views.Login"
+             >
+    <VerticalStackLayout Margin="20"
+                         Spacing="20">
+        <Label 
+             Text="Login"
+             VerticalOptions="Center" 
+             HorizontalOptions="Center"
+             FontAttributes="Bold"
+            TextColor="red"
+             Padding="0,20"
+             FontSize="20"/>
+
+        <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"
+               WidthRequest="200"
+               />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                />
+
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese el Usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   />
+            <Label Text="Contraseña"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                 />
+            <Entry x:Name="txtContrasena"
+                   Placeholder="Ingrese la Contraseña"
+                   IsPassword="True"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                   />
+
+        </Grid>
+        
+        <Button x:Name="btnIniciar"
+                Text="Iniciar Sesion"
+                Padding="0,10"
+                Clicked="btnIniciar_Clicked"
+                />
+
+
+    </VerticalStackLayout>
+</ContentPage>

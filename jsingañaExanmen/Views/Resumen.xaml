@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jsingañaExanmen.Views.Resumen"
+             >
+    <VerticalStackLayout Spacing="20"
+                         Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Usuario Conectado"
+            Grid.Column="0"
+            Grid.Row="0"
+            />
+            <Label x:Name="txtUsuario"
+            FontAttributes="Bold"
+            HorizontalTextAlignment="Center"
+            Grid.Column="1"
+            Grid.Row="0"/>
+        </Grid>
+
+        <Label 
+            Text="Resumen"
+            FontSize="20"
+            TextColor="Red"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Nombre:"
+               Grid.Row="0"
+               Grid.Column="0" />
+            <Label x:Name="txtNombre"
+               Grid.Row="0"
+               Grid.Column="1" />
+
+            <Label Text="Apellido:"
+               Grid.Row="1"
+               Grid.Column="0" />
+            <Label x:Name="txtApellido"
+               Grid.Row="1"
+               Grid.Column="1" />
+
+            <Label Text="Edad:"
+               Grid.Row="2"
+               Grid.Column="0" />
+            <Label x:Name="txtEdad"
+               Grid.Row="2"
+               Grid.Column="1" />
+
+            <Label Text="Fecha:"
+               Grid.Row="3"
+               Grid.Column="0" />
+            <Label x:Name="txtFecha"
+               Grid.Row="3"
+               Grid.Column="1" />
+
+            <Label Text="Ciudad:"
+               Grid.Row="4"
+               Grid.Column="0" />
+            <Label x:Name="txtCiudad"
+               Grid.Row="4"
+               Grid.Column="1" />
+
+            <Label Text="País:"
+               Grid.Row="5"
+               Grid.Column="0" />
+            <Label x:Name="txtPais"
+               Grid.Row="5"
+               Grid.Column="1" />
+
+            <Label Text="Monto Inicial:"
+               Grid.Row="6"
+               Grid.Column="0" />
+            <Label x:Name="txtMontoInicial"
+               Grid.Row="6"
+               Grid.Column="1" />
+
+            <Label Text="Pago Mensual:"
+               Grid.Row="7"
+               Grid.Column="0" />
+            <Label x:Name="txtPagoMensual"
+               Grid.Row="7"
+               Grid.Column="1" />
+
+            <Label Text="Pago Total:"
+               Grid.Row="8"
+               Grid.Column="0" />
+            <Label x:Name="txtPagoTotal"
+               Grid.Row="8"
+               Grid.Column="1" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
